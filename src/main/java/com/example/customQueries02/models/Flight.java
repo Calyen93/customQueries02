@@ -7,22 +7,13 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Flight {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String fromAirport;
     private String toAirport;
     private String status;
-
-    public Flight() {
-    }
-
-    public Flight(Long id, String fromAirport, String toAirport, String status) {
-        this.id = id;
-        this.fromAirport = fromAirport;
-        this.toAirport = toAirport;
-        this.status = status;
-    }
 
     public Long getId() {
         return id;
